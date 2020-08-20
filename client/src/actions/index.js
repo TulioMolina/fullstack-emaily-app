@@ -10,3 +10,9 @@ export const handleToken = (token) => async (dispatch) => {
   const res = await axios.post("/api/stripe", token);
   dispatch({ type: FETCH_USER, payload: res.data });
 };
+
+export const submitSurvey = (surveyFormValues, history) => async (dispatch) => {
+  const res = await axios.post("/api/surveys", surveyFormValues);
+  dispatch({ type: FETCH_USER, payload: res.data });
+  history.push("/surveys");
+};

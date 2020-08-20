@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import SurveyField from "./SurveyField";
-import validateEmails from "../../utils/validateEmails";
+import validateEmails, { sanitizeEmails } from "../../utils/validateEmails";
 import formFields from "./formFields";
 
 class SurveyForm extends Component {
@@ -12,10 +12,19 @@ class SurveyForm extends Component {
     ));
   }
 
+  onFormSubmit = (values) => {
+    values.recipients = sanitizeEmails(values.recipients);
+    this.props.onSurveySubmit();
+  };
+
   render() {
     return (
       <div>
-        <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
+        <form
+          onSubmit={this.props.handleSubmit((values) =>
+            this.onFormSubmit(values)
+          )}
+        >
           {this.renderFields()}
           <Link to="/surveys" className="red btn-flat white-text">
             Cancel
@@ -32,7 +41,7 @@ class SurveyForm extends Component {
 
 const validate = (values) => {
   const errors = {};
-  errors.emails = validateEmails(values.emails || "");
+  errors.recipients = validateEmails(values.recipients || "");
   formFields.forEach(({ name }) => {
     if (!values[name]) {
       errors[name] = `You must provide a value`;
