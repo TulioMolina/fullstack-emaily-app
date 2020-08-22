@@ -1,6 +1,6 @@
 const { redirectDomain } = require("../../config/keys");
 
-module.exports = ({ body }) => {
+module.exports = ({ id, body }) => {
   return `
   <html>
     <body>
@@ -9,10 +9,10 @@ module.exports = ({ body }) => {
         <p>Please answer the following question:</p>
         <p>${body}</p>
         <div>
-          <a href="${redirectDomain}/api/surveys/thanks/yes">Yes</a>
+          <a href="${redirectDomain}/api/surveys/${id}/yes">Yes</a>
         </div>
         <div>
-          <a href="${redirectDomain}/api/surveys/thanks/no">No</a>
+          <a href="${redirectDomain}/api/surveys/${id}/no">No</a>
         </div>
       </div>
     </body>
