@@ -74,6 +74,6 @@ Deployed app at this [link](https://tm-emaily.herokuapp.com).
 
 ![8](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/8.png)
 
-9) Dashboard with the updated vote count
+9) Refresh your dashboard to check the updated vote count
 
 ![9](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/9.png)
