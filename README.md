@@ -58,7 +58,7 @@ Deployed app at this [link](https://tm-emaily.herokuapp.com).
 
 ![4](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/4.png)
 
-5) Create your survey with your email as one of the recipients receive the survey
+5) Create your survey with your email as one of the recipients to receive the survey
 
 ![5](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/5.png)
 
@@ -70,7 +70,7 @@ Deployed app at this [link](https://tm-emaily.herokuapp.com).
 
 ![7](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/7.png)
 
-8) Email received, click 'yes' or 'no' to vote
+8) Email received, click either 'yes' or 'no' to vote
 
 ![8](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/8.png)
 
