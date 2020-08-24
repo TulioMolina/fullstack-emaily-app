@@ -18,3 +18,22 @@ This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemen
 - [Sendgrid](https://sendgrid.com/), [@sendgrid/mail](https://www.npmjs.com/package/@sendgrid/mail)
 - [Stripe](https://stripe.com/)
 - [Materialize CSS](https://materializecss.com/)
+
+## Local setup
+- Clone the repo: `git clone https://github.com/TulioMolina/fullstack-emaily-app.git`
+- Install dependencies: `npm install`
+- Appropriately configure your development environment by creating and populating the `/config/dev.js` file with the following data:
+  ```
+  module.exports = {
+  googleClientID: <google client ID>,
+  mongoURI: <mongoDB instance URI>,
+  cookieKey: <cookie key secret>,
+  stripePublishableKey: <stripe publishable key>,
+  stripeSecretKey: <stripe secret key>
+  sendGridKey: <sendgrid key>,
+  redirectDomain: "http://localhost:3000", 
+  };
+```
+- Run locally on port 3000: `npm run dev`
+
+Deployed app at this [link](https://tm-emaily.herokuapp.com).
