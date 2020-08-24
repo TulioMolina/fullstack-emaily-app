@@ -14,7 +14,7 @@ class Dashboard extends React.Component {
       case null:
         return;
       case false:
-        return <h5>You must log in</h5>;
+        return <h5 style={{ textAlign: "center" }}>You must log in</h5>;
       default:
         return (
           <div>

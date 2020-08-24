@@ -20,7 +20,7 @@ class SurveyNew extends React.Component {
       case null:
         return;
       case false:
-        return <h5>You must log in</h5>;
+        return <h5 style={{ textAlign: "center" }}>You must log in</h5>;
       default:
         if (!this.state.showFormReview) {
           return <SurveyForm onSurveySubmit={this.onSurveySubmit} />;
