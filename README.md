@@ -1,14 +1,16 @@
-# fullstack-emaily-app
+# [fullstack-emaily-app](https://tm-emaily.herokuapp.com)
 
-An email surveys SPA for collecting feedback from customers, built with Express.js and React.
+An email survey SPA for collecting feedback from customers, built with Express.js and React.
 
-Emaily provides an interface that allows to easily create and send simple yes/no question surveys, by using Sendgrid under the hood. It is mainly targeted to startups that need to collect data from their customers, but it could be used by anyone who wants to easily launch a survey. Conceptually, each survey has a cost of one credit, and users can buy 5 credits for 5$ with a credit card. This payment system is implemented with Stripe and it is currently in test mode, so instead of inputting a real credit card, you can use this fake data to acquire credits:
+Emaily provides an interface that allows to easily create and send simple yes/no question surveys, by using Sendgrid under the hood. It is mainly targeted to startups that need to collect data from their customers, but it could be used by anyone who wants to easily launch a survey.
+
+Conceptually, each survey has a cost of one credit, and users can buy 5 credits for 5$ with a credit card. This payment system is implemented with Stripe and it is currently in test mode, so instead of inputting a real credit card, you can use the following fake data to acquire credits:
 - Email: example@example.com
 - Card number: 4242424242424242
 - MM/YY: 12/25
 - CVC: 123
 
-This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemented with Passport.js. MongoDB is used as database. The app and database were deployed to Heroku and Atlas, respectively.
+This app employs Google OAuth 2.0 and cookies as authentication mechanism, which is implemented with Passport.js. MongoDB is used as database. The front end of the app was developed with React and Redux. The app and database were deployed to Heroku and Atlas, respectively.
 
 ## Technologies
 - [Express.js](https://expressjs.com/)
@@ -21,7 +23,7 @@ This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemen
 
 ## Local setup
 - Clone the repo: `git clone https://github.com/TulioMolina/fullstack-emaily-app.git`
-- Install dependencies: `npm install`
+- Install both server and client side dependencies: `npm install; cd client; npm install`
 - Appropriately configure your development environment by creating and populating the `/config/dev.js` file with the following data:
   ```
   module.exports = {
@@ -33,7 +35,7 @@ This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemen
   sendGridKey: <sendgrid key>,
   redirectDomain: "http://localhost:3000", 
   };
-```
+
 - Run locally on port 3000: `npm run dev`
 
 Deployed app at this [link](https://tm-emaily.herokuapp.com).
