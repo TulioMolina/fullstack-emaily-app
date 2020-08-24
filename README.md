@@ -21,7 +21,7 @@ This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemen
 
 ## Local setup
 - Clone the repo: `git clone https://github.com/TulioMolina/fullstack-emaily-app.git`
-- Install dependencies: `npm install`
+- Install both server and client side dependencies: `npm install; cd client; npm install`
 - Appropriately configure your development environment by creating and populating the `/config/dev.js` file with the following data:
   ```
   module.exports = {
