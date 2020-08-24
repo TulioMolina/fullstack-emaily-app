@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import formFields from "./formFields";
-import { submitSurvey } from "../../actions";
+import * as actions from "../../actions";
 
 const SurveyFormReview = ({
   onCancel,
@@ -45,6 +45,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { submitSurvey })(
-  withRouter(SurveyFormReview)
-);
+export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview));

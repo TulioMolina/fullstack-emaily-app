@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
+import { reduxForm } from "redux-form";
+import { connect } from "react-redux";
 import SurveyForm from "./SurveyForm";
 import SurveyFormReview from "./SurveyFormReview";
-import { reduxForm } from "redux-form";
 
-class SurveyNew extends Component {
+class SurveyNew extends React.Component {
   state = { showFormReview: false };
 
   onSurveySubmit = () => {
@@ -15,10 +16,17 @@ class SurveyNew extends Component {
   };
 
   renderContent() {
-    if (!this.state.showFormReview) {
-      return <SurveyForm onSurveySubmit={this.onSurveySubmit} />;
+    switch (this.props.auth) {
+      case null:
+        return;
+      case false:
+        return <h5>You must log in</h5>;
+      default:
+        if (!this.state.showFormReview) {
+          return <SurveyForm onSurveySubmit={this.onSurveySubmit} />;
+        }
+        return <SurveyFormReview onCancel={this.onCancel} />;
     }
-    return <SurveyFormReview onCancel={this.onCancel} />;
   }
 
   render() {
@@ -26,6 +34,14 @@ class SurveyNew extends Component {
   }
 }
 
-export default reduxForm({
-  form: "surveyForm",
-})(SurveyNew);
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth,
+  };
+};
+
+export default connect(mapStateToProps)(
+  reduxForm({
+    form: "surveyForm",
+  })(SurveyNew)
+);

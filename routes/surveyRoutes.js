@@ -35,7 +35,7 @@ module.exports = (app) => {
         .split(",")
         .map((email) => ({ email: email.trim() })),
       _user: req.user._id,
-      dataSent: Date.now(),
+      dateSent: Date.now(),
     });
     try {
       await sendSurvey(survey, surveyTemplate(survey));

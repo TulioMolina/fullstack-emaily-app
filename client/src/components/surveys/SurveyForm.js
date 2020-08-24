@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { reduxForm, Field } from "redux-form";
 import { Link } from "react-router-dom";
 import SurveyField from "./SurveyField";
 import validateEmails, { sanitizeEmails } from "../../utils/validateEmails";
 import formFields from "./formFields";
 
-class SurveyForm extends Component {
+class SurveyForm extends React.Component {
   renderFields() {
     return formFields.map(({ name, label }) => (
       <Field component={SurveyField} name={name} label={label} key={name} />
