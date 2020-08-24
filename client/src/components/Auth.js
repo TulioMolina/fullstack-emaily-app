@@ -1,10 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 
-class Auth extends React.Component {
-  render() {
-    return <div>Auth</div>;
+const Auth = (props) => {
+  switch (props.auth) {
+    case null:
+      return <></>;
+    case false:
+      return <>{props.notLogged}</>;
+    default:
+      return <>{props.logged}</>;
   }
-}
+};
 
-export default Auth;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth,
+  };
+};
+
+export default connect(mapStateToProps)(Auth);
