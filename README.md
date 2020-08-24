@@ -33,7 +33,7 @@ This app uses Google OAuth 2.0 and cookies as authentication mechanism, implemen
   sendGridKey: <sendgrid key>,
   redirectDomain: "http://localhost:3000", 
   };
-```
+
 - Run locally on port 3000: `npm run dev`
 
 Deployed app at this [link](https://tm-emaily.herokuapp.com).
