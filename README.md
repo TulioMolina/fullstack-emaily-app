@@ -2,9 +2,9 @@
 
 An email survey SPA for collecting feedback from customers, built with Express.js and React.
 
-Emaily provides an interface that allows to easily create and send simple yes/no question surveys, by using Sendgrid and its webhook events feature to monitor and update the vote counting. Only the first vote per customer is taken into account. Emaily is mainly targeted to startups that need to collect data from their customers, but it could be used by anyone who wants to easily launch a survey.
+Emaily provides an interface that allows to easily create and send simple yes/no question surveys by using, under the hood, Sendgrid and its webhook events feature to monitor and update the vote counting. Only the first vote per customer is taken into account. Emaily is mainly targeted to startups that need to collect data from their customers, but it can be used by anyone who wants to easily launch an email survey.
 
-Conceptually, each survey has a cost of one credit, and users can buy 5 credits for 5$ with a credit card. This payment system is implemented with Stripe and it is currently in test mode, so instead of inputting a real credit card, you can use the following fake data to acquire credits:
+Conceptually, each survey has a cost of one credit, and users can buy 5 credits for 5$ with a credit card. This payment system is implemented with Stripe and it is in test mode, so instead of inputting a real credit card, you can use the following fake data to acquire credits for free:
 - Email: example@example.com
 - Card number: 4242424242424242
 - MM/YY: 12/25
@@ -42,7 +42,7 @@ Deployed app at this [link](https://tm-emaily.herokuapp.com).
 
 ## Usage example
 
-1) Landing page, login with Google account
+1) Landing page, log in with Google account
 
 ![1](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/1.png)
 
@@ -74,6 +74,6 @@ Deployed app at this [link](https://tm-emaily.herokuapp.com).
 
 ![8](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/8.png)
 
-9) Dashboard with updated vote count
+9) Dashboard with the updated vote count
 
 ![9](https://github.com/TulioMolina/fullstack-emaily-app/blob/master/demo-images/9.png)
