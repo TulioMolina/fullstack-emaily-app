@@ -18,11 +18,7 @@ module.exports = (app) => {
   });
 
   app.get("/api/surveys/:surveyId/:choice", (req, res) => {
-    res.send({
-      message: "Thanks for voting",
-      surveyId: req.params.id,
-      choice: req.params.choice,
-    });
+    res.send("Thanks for voting, we appreciate your feedback");
   });
 
   app.post("/api/surveys", requireLogin, requireCredits, async (req, res) => {
