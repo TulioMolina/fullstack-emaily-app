@@ -14,7 +14,7 @@ This app employs [Google OAuth 2.0](https://developers.google.com/identity/proto
 
 ## Technologies
 - [Express.js](https://expressjs.com/)
-- [React](https://reactjs.org/), [React Router](https://reactrouter.com/), [Redux](https://redux.js.org/), [Redux Form](https://redux-form.com/8.3.0/)
+- [React](https://reactjs.org/), [React Router](https://reactrouter.com/), [Redux](https://redux.js.org/), [Redux Thunk](https://www.npmjs.com/package/redux-thunk), [Redux Form](https://redux-form.com/8.3.0/)
 - [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/)
 - [Passport.js](http://www.passportjs.org/), [cookie-session](https://www.npmjs.com/package/cookie-session)
 - [Sendgrid](https://sendgrid.com/), [@sendgrid/mail](https://www.npmjs.com/package/@sendgrid/mail)
