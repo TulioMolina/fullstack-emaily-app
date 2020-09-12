@@ -1,6 +1,6 @@
 # [fullstack-emaily-app](https://tm-emaily.herokuapp.com)
 
-An email survey SPA for collecting feedback, built with Express.js and React.
+An email survey web app for collecting feedback, built with Express.js and React.
 
 Emaily provides an interface that allows users to easily create and send simple yes/no question surveys by using, under the hood, [Sendgrid](https://sendgrid.com/) and its event webhook feature to monitor and update survey results. Only the first vote per customer is taken into account. Emaily is mainly targeted to startups that need to collect data from their customers, but it can be used by anyone who wants to easily launch an email survey.
 
